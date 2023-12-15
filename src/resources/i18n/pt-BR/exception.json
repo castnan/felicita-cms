@@ -1,0 +1,7 @@
+{
+	"emailExist": "Email já cadastrado!",
+	"UserAlready": "Usuário já cadastrado!",
+	"UserNotFound": "Usuário não encontrado!",
+	"UserIsInactive" : "Usuário Inativo!",
+	"IncorrectPassword": "Senha incorreta!"
+}

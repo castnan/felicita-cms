@@ -1,0 +1,53 @@
+datasource db {
+provider = "postgresql"
+url      = env("DATABASE_URL") 
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+model Partners {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  status       Boolean
+  dateCreated  DateTime @map("date_created") @default(now())
+  users        User[]
+  clothing     Clothing[] // Adicione esta linha para a relação inversa
+}
+
+model Size {
+  id           Int      @id @default(autoincrement())
+  name         String   @unique
+  clothing     Clothing[]
+  dateCreated  DateTime @map("date_created") @default(now())
+}
+
+model User {
+  id              Int      @id @default(autoincrement())
+  fullName        String   @map("full_name")
+  username        String   @map("user_name") @unique
+  userRole        String?
+  email           String   @unique
+  isActive        Boolean  @map("is_active")
+  isFirstAccess   Boolean  @map("is_first_access")
+  hashedPassword  String   @map("hashed_password")
+  dateCreated     DateTime @map("date_created") @default(now())
+  partners        Partners? @relation(fields: [partnersId], references: [id])
+  partnersId      Int?
+}
+
+model Clothing {
+  id            Int      @id @default(autoincrement())
+  code          String
+  sizeId        Int
+  number        Int
+  entryValue    Float    @map("entry_value")
+  outputValue   Float    @map("output_value")
+  description   String
+  isCurated     Boolean  @map("is_curated")
+  dateCreated   DateTime @map("date_created") @default(now())
+  size          Size     @relation(fields: [sizeId], references: [id])
+  partners      Partners @relation(fields: [partnersId], references: [id])
+  partnersId    Int
+}
+

@@ -1,0 +1,8 @@
+{
+	"emailExist": "Email already registered!",
+	"UserAlready": "User already registered!",
+	"UserNotFound": "User not found!",
+	"UserIsInactive": "Inactive user!",
+	"IncorrectPassword": "Incorrect password!"
+  }
+  

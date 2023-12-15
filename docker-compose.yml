@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  nestjs-app:
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile
+    ports:
+      - '3001:3001'
+    depends_on:
+      - postgres
+    command: sh -c "npx prisma generate && npm run start:dev" 
+
+  prisma:
+    build:
+      context: .
+      dockerfile: ./.docker/Dockerfile.prisma
+    volumes:
+      - ./prisma:/app/prisma
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: felicita
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: cast
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

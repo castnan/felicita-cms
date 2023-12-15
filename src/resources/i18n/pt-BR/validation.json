@@ -1,0 +1,24 @@
+{
+  "teste":"teste",
+  
+  "invalidDate":"Data inválida!",
+  "isNotEmpty": "Não deve estar vazio!",
+  "invalidNumber":"Insira apenas número",
+  
+  "isNotEmptySizeClothing": "Tamanho da roupa não deve estar vazio",
+  "isNotEmptyNumberClothing": "Número da roupa não deve estar vazio",
+  "isNotEmptyDescClothing": "Descrição da roupa não deve estar vazio",
+ 
+  "IsNotEmptyUserName": "Nome não deve estar vazio!",
+  "IsNotEmptyUserEmail": "Email não deve estar vazio!",
+  "IsNotEmptyUserEnrollment": "Matrícula não deve estar vazia!",
+  "IsNotEmptyUserRole": "Função não deve estar vazia!",
+  "IsNotEmptyPermissionAdmin": "Permissão de Administrador não deve estar vazia!",
+  "IsNotEmptyPermissionStock": "Permissão de Estoque não deve estar vazia!",
+  "IsNotEmptyPermissionWashing": "Permissão de Lavagem não deve estar vazia!",
+  "IsNotEmptyPermissionOperator": "Permissão de Operador não deve estar vazia!",
+  "NameMaxLength": "Nome contém mais de 50 caractéres!",
+  "invalidLocalizationLength": "Id de Localização inválido!",
+  "invalidPositionLength": "Id de Posição inválido!",
+  "HasNoPermissions": "Usuário deve ter ao menos uma permissão!"
+}

@@ -1,0 +1,22 @@
+{
+  "invalidDate": "Invalid date!",
+  "isNotEmpty": "Cannot be empty!",
+  "invalidNumber": "Insert only numbers",
+
+  "isNotEmptySizeClothing": "Clothing size cannot be empty",
+  "isNotEmptyNumberClothing": "Clothing number cannot be empty",
+  "isNotEmptyDescClothing": "Clothing description cannot be empty",
+ 
+  "IsNotEmptyUserName": "Name cannot be empty!",
+  "IsNotEmptyUserEmail": "Email cannot be empty!",
+  "IsNotEmptyUserEnrollment": "Enrollment cannot be empty!",
+  "IsNotEmptyUserRole": "Role cannot be empty!",
+  "IsNotEmptyPermissionAdmin": "Administrator permission cannot be empty!",
+  "IsNotEmptyPermissionStock": "Stock permission cannot be empty!",
+  "IsNotEmptyPermissionWashing": "Washing permission cannot be empty!",
+  "IsNotEmptyPermissionOperator": "Operator permission cannot be empty!",
+  "NameMaxLength": "Name exceeds 50 characters!",
+  "invalidLocalizationLength": "Invalid Location ID!",
+  "invalidPositionLength": "Invalid Position ID!",
+  "HasNoPermissions": "User must have at least one permission!"
+}
